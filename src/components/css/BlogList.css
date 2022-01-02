@@ -1,0 +1,29 @@
+.blog-link a {
+    text-decoration: none;
+}
+
+.blog-link-title-light {
+    color: #4F7942;
+}
+
+.blog-link-title-dark {
+    color: #8FBC8B;
+}
+
+.blog-link-date-light {
+    color: black
+}
+
+.blog-link-date-dark {
+    color: #A9A9A9
+}
+
+
+.blog-link a:hover .blog-link-title-light {
+    color: #A9BA9D
+} 
+
+.blog-link a:hover .blog-link-date-light {
+    color: gray
+}
+

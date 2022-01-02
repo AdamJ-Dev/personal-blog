@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+body {
+    font-family: 'Heebo', sans-serif;
+}
+
+blockquote {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-left-style: solid;
+    border-left-width: thick;
+    border-left-color: #9400D3; 
+}
+
+pre {
+    margin-top: 1rem;
+}
+
+
+blockquote blockquote {
+    margin-left: 1rem;  
+}
+
+blockquote p {
+    margin-left: 1rem;
+}
+
+html, body, #root, .app {
+    margin: 0;
+    height: 100vh;
+}
+
+.body-dark {
+    background-color: #121212;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.search-bar-dark, .delete-dark, .create-comment-field-dark {
+    background-color:#D3D3D3 !important;
+}
+
+.not-found-dark {
+    color: #A9A9A9; 
+}
+
+.auth-nav-link {
+    text-decoration: none;
+}
+
+.hr-dark {
+    color: white;
+}

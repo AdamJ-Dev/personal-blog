@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    position: relative;
+  }
+  
+.title {
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+.title-light a {
+    color: black
+}
+
+.title-dark a {
+    color: #A9A9A9;
+}
+
+.nav-icons {
+    position:absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.bi-moon-fill, .bi-envelope-fill {
+    color: #A9A9A9;
+}
+
+.bi-envelope {
+    color: black;
+}
+
+.bi-moon:hover, .bi-envelope:hover {
+    color: darkgray;
+}
+
+.bi-moon-fill:hover, .bi-envelope-fill:hover {
+    color: silver;
+}

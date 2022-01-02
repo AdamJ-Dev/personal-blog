@@ -1,0 +1,22 @@
+
+.blog-preview .preview {
+    color: dimgray
+}
+
+.create {
+    height: 100%;
+}
+
+.blog-preview {
+    height: 70vh;
+    overflow-y: auto;
+}
+
+
+.create-dark {
+    color: #A9A9A9;
+}
+
+.create-dark .form-control {
+    background-color: #D3D3D3;
+}

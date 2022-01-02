@@ -1,0 +1,15 @@
+.close-dialog:hover {
+    color: gray;
+}
+
+.close-dialog-wrap {
+    font-size: 1.5rem;
+}
+
+.close-dialog-dark {
+    color: silver;
+}
+
+.comment-policy-dialog-dark .comment-policy-dialog-background {
+    background-color: #121212;
+}

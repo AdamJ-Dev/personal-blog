@@ -1,0 +1,53 @@
+.write-actions, .log-actions {
+    text-decoration: none;
+}
+
+
+/* Light styles */ 
+
+.create-action-light {
+    background-color: #8FBC8B;
+    color: white;
+}
+
+.destroy-action-light {
+    background-color: #A31F34;
+    color: white;
+}
+
+.log-actions-light {
+    background-color: 	#F5F5F5;
+    color: black
+}
+
+.log-actions-light:hover {
+    color: gray;
+}
+
+.write-actions-light:hover {
+    color: 	#E8E8E8;
+}
+
+
+/* Dark styles */
+
+.log-actions-dark {
+    background-color: #282828;
+    color: #A9A9A9;
+}
+
+.write-actions-dark {
+    color: #A9A9A9;
+}
+
+.create-action-dark {
+    background-color: #4F7942;
+}
+
+.destroy-action-dark {
+    background-color: #65000B;
+}
+
+.log-actions-dark:hover, .write-actions-dark:hover {
+    color: #989898;
+}

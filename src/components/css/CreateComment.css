@@ -1,0 +1,28 @@
+.close-dialog:hover {
+    cursor: pointer;
+}
+
+.new-comment {
+    max-width: 90%;
+}
+
+.close-reply-wrap {
+    font-size: 1.5rem;
+}
+
+.close-reply:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.close-reply-dark {
+    color: silver;
+}
+
+.comment-body-label {
+    font-size: 0.9rem;
+}
+
+.comment-body-label a {
+    text-decoration: none;
+}

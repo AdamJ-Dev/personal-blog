@@ -1,0 +1,39 @@
+.blog-details-title-light {
+    color: #004526;
+}
+
+.blog-details-title-dark {
+    color: #8FBC8B;
+}
+
+.blog-details-edit {
+    text-decoration: none;
+    color: black;
+}
+
+
+.blog-details-edit:hover {
+    color: gray;
+}
+
+
+.blog-details-date-dark, .blog-details-edit-dark {
+    color: #A9A9A9
+}
+
+.blog-body-dark {
+    color: #A9A9A9;
+}
+
+.blog-body {
+    font-size: 1.2em;
+}
+
+.scroll-to-top {
+    color: #0d6efd
+}
+
+.scroll-to-top:hover {
+    color: #0047AB;
+    cursor: pointer;
+}

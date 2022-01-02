@@ -1,0 +1,34 @@
+.comment-body {
+    font-size: 1.2rem;
+}
+
+.comment-title {
+    font-size: 1.5rem;
+}
+
+.comment-box {
+    width: 90%;
+}
+
+.reply-link {
+    color: #0d6efd
+}
+
+.reply-link:hover {
+    color: #0047AB;
+    cursor: pointer;
+}
+
+.admin-comment-title-dark {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#8FBC8B, #D87EFF);
+}
+
+.admin-comment-title-light {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#004526,  #9400D3);
+}

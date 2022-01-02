@@ -1,0 +1,22 @@
+.comment-section-title-light {
+    color: #004526;
+}
+
+.comment-section-title-dark {
+    color: #8FBC8B;
+}
+
+.comment-section-text-dark {
+    color: #A9A9A9;
+}
+
+
+.go-to-comment {
+    color: #0d6efd
+}
+
+.go-to-comment:hover {
+    color: #0047AB;
+    cursor: pointer;
+}
+
