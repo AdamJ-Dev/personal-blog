@@ -35,8 +35,8 @@ const BlogDetails = ({ blog }) => {
                     <h1 className={`blog-details-title blog-details-title-${theme}`}>{ blog.title }</h1>
                     <p className={`d-inline blog-details-date blog-details-date-${theme}`}><small>{ blog.date }</small></p>
                     <div className={`blog-details-chat-link blog-details-chat-link-${theme} mt-2`} onClick={ handleGoToCommentSection }>
-                        <i className={`blog-details-chat blog-details-chat-${theme} bi bi-chat-right`}></i>
-                        { !!numComments && <span className={`blog-details-chat blog-details-chat-${theme}`}>   {numComments}</span> }
+                        <i className="bi bi-chat-right"></i>
+                        { !!numComments && <span>    {numComments}</span> }
                     </div>
                     <hr/>
                     

@@ -10,6 +10,7 @@
 .blog-details-chat-link {
     font-size: 0.9rem; 
     float: right; 
+    line-height: 100%;
 }
 
 .blog-details-edit {
