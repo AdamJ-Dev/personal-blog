@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import replaceAll from "../../helpers/replaceAll";
 import useRead from "../../hooks/firestore/useRead";

@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const Skewer = () => {
     return <div className="border-end me-4" style={{minHeight: "100%"}}>
         &nbsp;

@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import replaceAll from "../../helpers/replaceAll";
-import { useAuthContext } from "../../hooks/auth/useAuthContext";
 import { useTheme } from "../../hooks/useTheme";
 import DeleteWithPasscodeForm from "../auth/DeleteWithPasscodeForm";
 
 const BlogLink = ({blog, index, destroyable, totalNumDisplayedBlogs}) => {
     const { theme } = useTheme();
-    const { user } = useAuthContext();
-    
+   
     return (
         <div className="blog-link my-3">
             <Link to={`/blogs/${ replaceAll(blog.title, " ", "-") }`}>
