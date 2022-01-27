@@ -19,8 +19,6 @@ const Comment = ({ comment }) => {
     const [isReplying, setIsReplying] = useState(false)
     const { theme } = useTheme()
 
-    console.log(process.env.REACT_APP_ADMIN_UID, comment.userId)
-
     return (
         <div className={`ms-4 comment-box  border-${theme}`}>
             <div className="d-flex skewed-comment w-100">

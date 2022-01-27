@@ -4,7 +4,6 @@ import useRead from "../../hooks/firestore/useRead"
 import { useTheme } from "../../hooks/useTheme"
 import BlogDetails from "./BlogDetails"
 
-
 const BlogPage = () => {
     const { theme } = useTheme();
     const { title } = useParams();

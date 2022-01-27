@@ -10,7 +10,7 @@ const CommentSection = ({ blogId, blogTitle }) => {
     const { theme } = useTheme()
     const order = { orderBy: "date", direction: "asc" }
     const test = { field: "blogId", operator: "==", value: blogId }
-    const { error, isPending, docs} = useRead("comments", { test, order }, true)
+    const { isPending, docs} = useRead("comments", { test, order }, true)
 
     const comments = orderComments(docs)
 

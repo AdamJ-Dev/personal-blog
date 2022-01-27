@@ -4,6 +4,12 @@
 
 .blog-details-title-dark {
     color: #8FBC8B;
+
+}
+
+.blog-details-chat-link {
+    font-size: 0.9rem; 
+    float: right; 
 }
 
 .blog-details-edit {
@@ -12,13 +18,14 @@
 }
 
 
-.blog-details-edit:hover {
+.blog-details-edit:hover, .blog-details-chat-link:hover {
     color: gray;
+    cursor: pointer;
 }
 
-
-.blog-details-date-dark, .blog-details-edit-dark {
-    color: #A9A9A9
+ 
+.blog-details-date-dark, .blog-details-edit-dark, .blog-details-chat-link-dark {
+    color: #A9A9A9;
 }
 
 .blog-body-dark {
