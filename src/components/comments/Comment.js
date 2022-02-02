@@ -24,7 +24,7 @@ const Comment = ({ comment }) => {
             <div className="d-flex skewed-comment w-100">
                 <DepthSkew depth={comment.depth} key={comment.id}/>
                 <div className="comment w-100">
-                    <div className={`comment-title mt-2 comment-section-text-${theme} ${comment.userId===process.env.REACT_APP_ADMIN_UID && `admin-comment-title-${theme}`}`}><strong>{comment.author}</strong></div>
+                    <div className={`comment-title mt-2 comment-section-text-${theme} ${comment.userId && comment.userId===process.env.REACT_APP_ADMIN_UID && `admin-comment-title-${theme}`}`}><strong>{comment.author}</strong></div>
                     <ReactMarkdown className={`comment-body comment-body-${theme} comment-section-text-${theme}`} children={comment.body} components={{
                     code({node, inline, className, children, ...props}) {
                         const match = /language-(\w+)/.exec(className || '')

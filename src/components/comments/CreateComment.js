@@ -25,7 +25,7 @@ const CreateComment = ({ blogId, parent, isReply, setIsReplying}) => {
             blogId,
             depth: parent.depth + 1,
             parentId: parent.id,
-            userId: user.uid ? user.uid: null 
+            userId: user ? user.uid: null 
         });
         if (isReply) setIsReplying(false);
         if (!isReply) document.getElementById("accept-comment-policy").click();
