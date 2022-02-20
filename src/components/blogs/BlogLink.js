@@ -8,11 +8,13 @@ const BlogLink = ({blog, index, destroyable, totalNumDisplayedBlogs}) => {
    
     return (
         <div className="blog-link my-3">
-            <Link to={`/blogs/${ replaceAll(blog.title, " ", "-") }`}>
+            <div className="m-auto" style={{maxWidth: "70%"}}>
+            <Link to={`/blogs/${ replaceAll(blog.title, " ", "-") }`} >
                 <h4 className={`blog-link-title blog-link-title-${theme}`}>{ blog.title }</h4>
                 <p className={`blog-link-date blog-link-date-${theme}`}><small>{ blog.date }</small></p>
             </Link>
             {destroyable && <DeleteWithPasscodeForm collection={"blogs"} document={blog}/>}
+            </div>
             {index !== (totalNumDisplayedBlogs - 1) && <hr className="blog-splitter"/>}
         </div>
       );

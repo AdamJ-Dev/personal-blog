@@ -32,7 +32,7 @@ const BlogDetails = ({ blog }) => {
         <div className="blog-details row mt-4 d-flex justify-content-center">
             <article className="col-10">
                     { user && <span style={{float: "right"}}><Link className={`blog-details-edit blog-details-edit-${theme}`} to={`/auth/create/${blog.title}`}>Edit</Link></span> }
-                    <h1 className={`blog-details-title blog-details-title-${theme}`}>{ blog.title }</h1>
+                    <h1 className={`blog-details-title blog-details-title-${theme}`} style={{maxWidth: "70%"}}>{ blog.title }</h1>
                     <p className={`d-inline blog-details-date blog-details-date-${theme}`}><small>{ blog.date }</small></p>
                     <div className={`blog-details-chat-link blog-details-chat-link-${theme} mt-2`} onClick={ handleGoToCommentSection }>
                         <i className="bi bi-chat-right"></i>
