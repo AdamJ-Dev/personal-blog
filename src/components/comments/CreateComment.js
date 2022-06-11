@@ -20,7 +20,7 @@ const CreateComment = ({ blogId, parent, isReply, setIsReplying}) => {
         
         e.preventDefault();
         await addDocument({
-            author,
+            author: author ? author: "Anonymous",
             body, 
             blogId,
             depth: parent.depth + 1,
@@ -38,7 +38,7 @@ const CreateComment = ({ blogId, parent, isReply, setIsReplying}) => {
             <h5 className={`d-inline comment-section-text-${theme}`}>Your {isReply ? "reply": "comment"}:</h5>
             {isReply && <span className="close-reply-wrap"><i onClick={() => setIsReplying(false)} className={`bi bi-x close-reply close-reply-${theme} mt-1`} style={{float: "right"}}></i></span>}
             <form onSubmit={handleSubmit} className="comment-form">
-                <input id="comment-author-field" name="comment-author" onChange={(e) => setAuthor(e.target.value)} type="text" className={`form-control mt-3 create-comment-field-${theme}`} autoComplete="off" placeholder="Name" required/>
+                <input id="comment-author-field" name="comment-author" onChange={(e) => setAuthor(e.target.value)} type="text" className={`form-control mt-3 create-comment-field-${theme}`} autoComplete="off" placeholder="Name"/>
                 <textarea name="comment-body" id="comment-body-field" onChange={(e) => setBody(e.target.value)} className={`form-control mt-3 create-comment-field-${theme}`} placeholder="Thoughts" required>
                 </textarea>
                 <label className={`comment-body-label form-label comment-section-text-${theme}`} htmlFor="comment-body-field" style={{float: "right"}}><a href="https://www.markdownguide.org/basic-syntax/">markdown</a>-interpreted</label>

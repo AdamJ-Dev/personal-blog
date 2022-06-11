@@ -24,7 +24,7 @@ const NavIcons = () => {
                 </a>
             </span>
             <span className="nav-icon-wrap" onClick={changeTheme}>
-                <i className="bi bi-moon-fill" ></i>
+                <i class="bi bi-brightness-high-fill"></i>
             </span>
         </div>
         }

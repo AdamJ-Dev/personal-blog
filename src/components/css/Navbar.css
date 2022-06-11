@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-.bi-moon-fill, .bi-envelope-fill {
+.bi-brightness-high-fill, .bi-envelope-fill {
     color: #A9A9A9;
 }
 
@@ -35,6 +35,6 @@
     color: darkgray;
 }
 
-.bi-moon-fill:hover, .bi-envelope-fill:hover {
+.bi-brightness-high-fill:hover, .bi-envelope-fill:hover {
     color: silver;
 }
