@@ -1,0 +1,20 @@
+.workspace-dark {
+    color: silver;
+}
+
+
+.task-lists {
+    justify-content: space-around;
+}
+
+.bi-save:hover {
+    cursor:pointer;
+}
+
+.save-btn {
+    float: right;
+}
+
+.back-workspaces {
+    font-size: 0.9rem;
+}

@@ -13,6 +13,9 @@ import AuthNavigator from './components/auth/AuthNavigator';
 import CommentPolicy from './components/comments/CommentPolicy';
 import BlogPage from './components/blogs/BlogPage';
 import UpdateBlog from './components/blogs/UpdateBlog';
+import TaskManager from "./components/tasks/TaskManager/TaskManager"
+import Workspace from "./components/tasks/Workspace/Workspace"
+import WorkspaceWrap from "./components/tasks/Workspace/WorkspaceWrap"
 
 function App() {
   const { theme } = useTheme()
@@ -37,6 +40,9 @@ function App() {
             <Route path="/auth/login" element={<UnPrivateRoute><Login/></UnPrivateRoute>}></Route>
             <Route path="/auth/logout" element={<PrivateRoute redirect={"/auth"}><Logout/></PrivateRoute>}></Route>
             <Route path="/policy" element={<CommentPolicy/>}></Route>
+            <Route path="/tasks" element={<TaskManager/>}></Route>
+            <Route exact path="/tasks/workspace" element={<Workspace workspaceId="default" tasks={[]} listId={undefined}/>}></Route>
+            <Route path="/tasks/workspace/:id" element={<PrivateRoute redirect={"/auth/login"}><WorkspaceWrap/></PrivateRoute>}></Route>
             <Route path="*" element={<NotFound/>}></Route>
           </Routes>
         </div>

@@ -16,7 +16,6 @@ const writeReducer = (state, action) => {
         case "IS_PENDING":
             return { document: null, isPending: true, success: false, error: null}
         case "ADDED_DOCUMENT":
-            console.log("the document is added to state")
             return { document: action.payload, isPending: false, success: true, error: null }
         case "UPDATED_DOCUMENT":
             return { document: action.payload, isPending: false, success: true, error: null}
@@ -33,29 +32,24 @@ const writeReducer = (state, action) => {
 const useWrite = (collection) => {
     const [response, dispatch] = useReducer(writeReducer, initialState)
     const [isCancelled, setIsCancelled] = useState(false)
-    const [request, setRequest] = useState(null)
 
     const ref = projectFirestore.collection(collection)
 
     const dispatchIfNotCancelled = action => {
         if (!isCancelled) {
-            console.log("Dispatching " + action.type)
             dispatch(action)
             return
         }
-        console.log("failed dispatch")
-        
+
     }
 
     const addDocument = async (doc) => {
             dispatch({ type: "IS_PENDING"})
             try {
                 const date = timestamp.fromDate(new Date())
-                const addedDocument = await ref.add({...doc, date })
-                console.log("about to dispatch");
-                setRequest(`create-${collection}`)
+                const addedDocument = await ref.add({...doc, date });
                 dispatchIfNotCancelled({type: "ADDED_DOCUMENT", payload: addedDocument})
-                console.log(response)
+                if (!isCancelled) return addedDocument
             } catch (err) {
                 dispatchIfNotCancelled({ type: "ERROR", payload: err.message})
             }
@@ -105,7 +99,6 @@ const useWrite = (collection) => {
   
     
     useEffect(() => {
-        if (response.success && request === "create-blogs") window.location.assign("/")
         return () => {setIsCancelled(true)}
     }, [])
 

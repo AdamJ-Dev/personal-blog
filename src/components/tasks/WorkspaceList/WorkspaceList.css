@@ -1,0 +1,52 @@
+/* .workspace-list-light h1 {
+    color: #004526;
+}
+/* 
+/* .workspace-list-dark h1 {
+    color: #8FBC8B;
+
+} */ 
+
+.bi-pencil-square {
+   float:right;
+}
+
+.bi-pencil-square:hover {
+    cursor:pointer;
+ }
+
+.workspace-list ul {
+    list-style-position: inside;
+    list-style-type: "";
+}
+
+.workspace-list-dark {
+    color: silver;
+}
+
+.workspace-list-light .workspace-link, .deletable-link {
+    color: black;
+}
+
+.workspace-list-dark .workspace-link, .deletable-link {
+    color: silver;
+}
+
+
+.workspace-link, .deletable-link {
+    font-size: 1.1rem;
+}
+.workspace-link:hover {
+    color: #8FBC8B;
+}
+
+
+.bi-trash:hover {
+    color: red;
+    cursor: pointer;
+ }
+
+
+.pencil-light {
+    color: silver;
+}

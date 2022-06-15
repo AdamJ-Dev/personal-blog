@@ -33,7 +33,7 @@ const Home = ({destroyable}) => {
                 {!isPending && 
                 (search ? 
                 <BlogSearch allBlogs={ allBlogs } search={ search } destroyable={ destroyable }/>: 
-                <BlogList blogs={ allBlogs.slice((pageNumber-1)*6, pageNumber*6) } allBlogs={ allBlogs } pageNumber={ pageNumber } destroyable={ destroyable }/>)}
+                <BlogList blogs={ allBlogs.slice((pageNumber-1)*5, pageNumber*5) } allBlogs={ allBlogs } pageNumber={ pageNumber } destroyable={ destroyable }/>)}
             </div>
             {destroyable && (
                 <div className="container-fluid text-center mt-3">
