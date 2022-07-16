@@ -18,6 +18,8 @@ const Workspace = ({workspaceId, tasks, listId}) => {
   const boards = {1: getBoardsCards(1, cards), 2: getBoardsCards(2, cards), 3: getBoardsCards(3, cards)};
   const { addDocument, updateDocument, response } = useWrite("task_lists");
 
+  console.log(orderCardsBySlot(boards[1]));
+
 
   const handleSave = async e => {
       if (taskListId === undefined) {
@@ -98,7 +100,7 @@ const Workspace = ({workspaceId, tasks, listId}) => {
             }
       </div>
       <div className="m-5 text-center back-workspaces">
-            <Link to="/tasks"><i class="bi bi-arrow-90deg-left"></i></Link> Back {workspaceId !== "default" && "to workspaces"}
+            <Link to="/tasks"><i className="bi bi-arrow-90deg-left"></i></Link> Back {workspaceId !== "default" && "to workspaces"}
       </div>
     </div>
     

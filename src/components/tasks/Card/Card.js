@@ -8,7 +8,7 @@ const Card = ({children, id, slot, boardId, message, draggable, cards, setCards}
         e.dataTransfer.setData("slot", slot)
 
         setTimeout(() => {
-           document.getElementById(`card-slot-${id}`).style.display = "none";
+           document.getElementById(id).style.display = "none";
         }, 0)
         }
         
@@ -29,21 +29,20 @@ const Card = ({children, id, slot, boardId, message, draggable, cards, setCards}
 
     const handleDragEnd = e => {
         e.preventDefault();
-        document.getElementById(`card-slot-${id}`).style.display = "block";
+        document.getElementById(id).style.display = "block";
         e.stopPropagation();
     }
     
     const handleDrop = e => {
     
         const getData = (type) => {
-            return parseInt(e.dataTransfer.getData(type));
+            return e.dataTransfer.getData(type);
         };
     
         const cardId = getData("card_id");
-        const cardBoardId = getData("board_id");
-        const cardSlot = getData("slot");
+        const cardBoardId = parseInt(getData("board_id"));
+        const cardSlot = parseInt(getData("slot"));
     
-        
     
         const isDiffBoard = boardId !== cardBoardId;
         const isDiffSlot = slot !== cardSlot;
@@ -64,12 +63,12 @@ const Card = ({children, id, slot, boardId, message, draggable, cards, setCards}
     };
 
     return ( 
-        <div className="p-4">
-            <div id={`card-slot-${id}`}>
+        <div>
+            <div id={`${id}`}>
             <div 
             id={id}
             slot={slot}
-            className={`d-inline-block ${draggable ? "p-5": "p-2"}`}
+            className={`d-inline-block ${draggable ? "p-5": "pb-3"}`}
             onDragStart={handleDragStart}
             onDragOver = {handleDragOver}
             onDragEnd = {handleDragEnd}

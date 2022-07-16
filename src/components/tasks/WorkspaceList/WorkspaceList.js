@@ -40,7 +40,7 @@ const WorkspaceList = () => {
         await ref.get().then(snapshot => {
             if (!snapshot.empty) {
                 snapshot.docs.forEach(doc => {
-                    doc.ref.delete()
+                    doc.ref.delete();
                 })
             }
         });
@@ -80,7 +80,7 @@ const WorkspaceList = () => {
                             )
                             }
                         </ul>
-                        <i className={`bi bi-pencil-square ${deletable && "pencil-light"}`} onClick={() => {setDeletable(!deletable)}}></i>
+                        <i className={`bi bi-pencil-square ${deletable && "pencil-delete"}`} onClick={() => {setDeletable(!deletable)}}></i>
                     </div>
                 
             :

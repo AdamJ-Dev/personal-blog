@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const CreateTask = ({boardId, boardLength, cards, setCards}) => {
     const [message, setMessage] = useState("");
@@ -14,7 +14,7 @@ const CreateTask = ({boardId, boardLength, cards, setCards}) => {
         e.preventDefault();
 
         const card = {
-                id: cards.length + 1,
+                id: uuidv4(),
                 message,
                 boardId,
                 slot: boardLength + 1

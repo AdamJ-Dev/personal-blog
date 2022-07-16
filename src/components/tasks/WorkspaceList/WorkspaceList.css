@@ -1,12 +1,3 @@
-/* .workspace-list-light h1 {
-    color: #004526;
-}
-/* 
-/* .workspace-list-dark h1 {
-    color: #8FBC8B;
-
-} */ 
-
 .bi-pencil-square {
    float:right;
 }
@@ -24,11 +15,15 @@
     color: silver;
 }
 
-.workspace-list-light .workspace-link, .deletable-link {
+.workspace-list-light .workspace-link {
     color: black;
 }
 
-.workspace-list-dark .workspace-link, .deletable-link {
+.workspace-list-light .deletable-link {
+    color: black;
+}
+
+.workspace-list-dark .workspace-link {
     color: silver;
 }
 
@@ -47,6 +42,10 @@
  }
 
 
-.pencil-light {
+.pencil-delete {
     color: silver;
+}
+
+.workspace-list-dark .pencil-delete {
+    color: darkgray;
 }
